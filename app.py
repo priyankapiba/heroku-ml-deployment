@@ -26,8 +26,8 @@ def predict():
         text = ">50K"
     else:
         text = "<=50K"
-
-    return render_template('index.html', prediction_text='Employee Income is {}'.format(text))
+    return {'income': text}
+#     return render_template('index.html', prediction_text='Employee Income is {}'.format(text))
 
 
 if __name__ == "__main__":
