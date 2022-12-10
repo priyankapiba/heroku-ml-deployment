@@ -9,9 +9,6 @@ model = pickle.load(open('model.pkl', 'rb'))
 cols=['age','workclass','education','marital-status','occupation','relationship','race','gender','capital-gain','capital-loss',
       'hours-per-week','native-country']
 
-@app.route('/')
-def home():
-    return render_template('index.html')
 
 @app.route('/predict',methods=['GET'])
 def predict():
